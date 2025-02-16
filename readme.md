@@ -186,16 +186,23 @@ And we should provide the key an unique key to avoid the conflict on the rerende
 key=balance.blockchain
 
 We could pass the price into the component WalletRow and it will calculate the usdValue by itself and we could put it into the render div element
+
+```
 return (
 <div {...rest}>
-{formattedBalances.map((balance: FormattedWalletBalance, index: number) => {
-<WalletRow 
-          className={classes.row}
-          key={balance.blockchain}
-          amount={balance.amount}
-          price={prices[balance.currency]}
-          formattedAmount={balance.formatted}
-        />})
-}
+    {formattedBalances.map((balance: FormattedWalletBalance, index: number) =>
+        {
+            <WalletRow
+                className={classes.row}
+                key={balance.blockchain}
+                amount={balance.amount}
+                price={prices[balance.currency]}
+                formattedAmount={balance.formatted}
+            />
+        })
+    }
 </div>
 )
+```
+
+The detail refactoring is put inside problem 3
