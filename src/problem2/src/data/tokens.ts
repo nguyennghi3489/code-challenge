@@ -1,4 +1,4 @@
-const tokens = [
+export const tokens = [
   {
     currency: "BLUR",
     date: "2023-08-29T07:10:40.000Z",

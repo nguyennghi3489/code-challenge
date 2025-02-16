@@ -46,6 +46,16 @@ var sum_to_n_c = function (n) {
 };
 ```
 
+### Problem 2: Fancy Form
+
+Move to problem2 folder
+
+```
+    yarn install
+    yarn dev
+
+```
+
 ### Problem 3: Refactor code
 
 First I would like to make the code more easily to read by restructure the code folders:
