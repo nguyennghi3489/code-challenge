@@ -1,0 +1,35 @@
+#Problem 1: Three ways to sum to n
+
+```js
+var sum_to_n_a = function (n) {
+  // Using the loop to sum each number to the total
+  let total = 0;
+  for (let i = 1; i <= n; i++) {
+    total += i;
+  }
+  return total;
+};
+```
+
+```
+var sum_to_n_b = function (n) {
+  // Using the recursive way
+  var recursive_sum = function (i, max, val) {
+    if (i > max) {
+      return val;
+    }
+    return recursive_sum(i + 1, max, val + i);
+  };
+
+  return recursive_sum(1, n, 0);
+};
+```
+
+```
+var sum_to_n_c = function (n) {
+  // Using the math formula
+  // 1 ... 5 = (1 + 5) + (2 + 4) + (3 + 3) + (4 + 2) + (5 + 1) = (1+n)*n/2
+
+  return (1 + n) * (n / 2);
+};
+```
