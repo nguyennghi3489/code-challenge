@@ -113,7 +113,7 @@ function App() {
                       value={field.value}
                       onValueChange={({ value }) => field.onChange(value)}
                       collection={tokensOptions}
-                      size="lg"
+                      size="sm"
                       width="320px"
                     >
                       <SelectTrigger>
@@ -143,7 +143,7 @@ function App() {
                   name="amount"
                   rules={{ required: "Please input an amount" }}
                   render={({ field }) => (
-                    <Input placeholder="Amount to send" size="lg" {...field} />
+                    <Input placeholder="Amount to send" size="2xl" {...field} />
                   )}
                 />
               </Field>
@@ -164,7 +164,7 @@ function App() {
                       value={field.value}
                       onValueChange={({ value }) => field.onChange(value)}
                       collection={tokensOptions}
-                      size="lg"
+                      size="sm"
                       width="320px"
                     >
                       <SelectTrigger>
@@ -187,9 +187,9 @@ function App() {
               </Field>
               <Input
                 placeholder="Amount to receive"
-                value={swappedAmount}
+                value={swappedAmount as string}
+                size="2xl"
                 disabled
-                size="lg"
               />
             </VStack>
           </Stack>

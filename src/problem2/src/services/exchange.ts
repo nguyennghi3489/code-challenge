@@ -29,7 +29,7 @@ export const swapToken = async ({
   if (!fromTokenValue || !toTokenValue)
     return Promise.reject(new Error("Unable to process swap token"));
 
-  const ratio = toTokenValue / fromTokenValue;
+  const ratio = fromTokenValue / toTokenValue;
 
   return new Promise((resolve) =>
     setTimeout(() => resolve(ratio * amount), 1000)
